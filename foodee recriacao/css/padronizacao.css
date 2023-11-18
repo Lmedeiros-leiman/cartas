@@ -17,11 +17,16 @@ e portanto mais chamativa ela é.
 
 */
 
+/*
+Aqui algumas fontes importadas do google fonts.
+*/
 
-/* 
-        cores 
-    
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Gudea&family=Roboto:wght@300;900&family=Sanchez&display=swap');
 
+:root {
+    /* 
+        cores   
+*/
     --cor-principal: rgba();
     --cor-fundo: rgba();
     --cor-fundo-secundaria: rgba();
@@ -33,26 +38,33 @@ e portanto mais chamativa ela é.
     --cor-texto-subtitulo: rgba(1, 1, 1, 1);
     /* 
         Tamanhos de fonte. 
-    
+    */
     --tamanho-titulo: 2rem;
     --tamanho-subtitulo: 1.5rem;
     --tamanho-normal: 1rem;
-
     /*
-        Fontes Utilizadas;
     
+        Fontes Utilizadas;
+        nesse projeto pretendo usar 3 fontes.
+        - uma pro logo
+        - uma pro titulo.
+        - uma padrão
+        sempre posso escrever com a fonte padrão porem em negrito.
+    */
 
-    --fonte-principal: "Arial";
+    --fonte-logo: 'Great Vibes', cursive;
 
-    --fonte-titulo: "Buda";
-    --fonte-terciaria: "";
-}
-*/
-:root {
-    --cor-principal: rgba();
-    --cor-fundo: rgba();
-    --cor-fundo-secundaria: rgba();
-    --cor-terciaria: rgba();
+    --fonte-titulo: 'Sanchez', serif;
+    --fonte-padrao: 'Roboto', sans-serif;
+    --fonte-extra: 'Gudea', sans-serif;
+
+
+    --cor-logo: rgba(245, 245, 245, 1);
+    --cor-principal: var(--cor-logo);
+    --cor-fundo-principal: rgb(235, 235, 235);
+    --cor-fundo-secundaria: rgba(74, 74, 74, 1);
+    --cor-fundo-secundaria-escuro: rgba(34, 34, 34, 1);
+    --cor-chamado-acao: rgba(251, 109, 20, 1);
 
 }
 
@@ -62,7 +74,24 @@ e portanto mais chamativa ela é.
 
     padding: 0;
     margin: 0;
+
+    position: relative;
+    transition: all ease-in-out 0.3s;
+
+    z-index: 10;
 }
+
+body,
+.body,
+#body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--fonte-padrao);
+
+}
+
+
+
 
 a {
     color: var(--cor-principal-botao);
@@ -84,7 +113,6 @@ h4,
 h5,
 h6 {
     font-family: "Playfair Display", serif;
-    color: #000;
 }
 
 p {
