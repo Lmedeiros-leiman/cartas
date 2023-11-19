@@ -24,18 +24,7 @@ Aqui algumas fontes importadas do google fonts.
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Gudea&family=Roboto:wght@300;900&family=Sanchez&display=swap');
 
 :root {
-    /* 
-        cores   
-*/
-    --cor-principal: rgba();
-    --cor-fundo: rgba();
-    --cor-fundo-secundaria: rgba();
-    --cor-terciaria: rgba();
 
-    --cor-texto-padrao: rgba(1, 1, 1, 1);
-    --cor-texto-invertido: var(--cor-fundo);
-    --cor-texto-titulo: rgba(1, 1, 1, 1);
-    --cor-texto-subtitulo: rgba(1, 1, 1, 1);
     /* 
         Tamanhos de fonte. 
     */
@@ -56,7 +45,7 @@ Aqui algumas fontes importadas do google fonts.
 
     --fonte-titulo: 'Sanchez', serif;
     --fonte-padrao: 'Roboto', sans-serif;
-    --fonte-extra: 'Gudea', sans-serif;
+    --fonte-extra: "Playfair Display", 'Gudea', sans-serif, serif;
 
 
     --cor-logo: rgba(245, 245, 245, 1);
@@ -65,7 +54,7 @@ Aqui algumas fontes importadas do google fonts.
     --cor-fundo-secundaria: rgba(74, 74, 74, 1);
     --cor-fundo-secundaria-escuro: rgba(34, 34, 34, 1);
     --cor-chamado-acao: rgba(251, 109, 20, 1);
-
+    --cor-chamado-acao-ativo: rgb(219, 99, 23);
 }
 
 * {
@@ -77,34 +66,50 @@ Aqui algumas fontes importadas do google fonts.
 
     position: relative;
     transition: all ease-in-out 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
 
     z-index: 10;
+
+
 }
 
 body,
 .body,
 #body {
-    width: 100vw;
-    height: 100vh;
     font-family: var(--fonte-padrao);
 
 }
 
+.selected {
+    color: var(--cor-chamado-acao);
+}
 
+img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
 
 
 a {
-    color: var(--cor-principal-botao);
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
+    color: var(--cor-chamado-acao);
     transition: 0.5s;
+
+    cursor: pointer;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: var(--cor-principal-botao);
+    color: rgb(255, 0, 0);
 }
+
+a:visited {
+    color: crimson;
+}
+
+
 
 h1,
 h2,
@@ -112,85 +117,88 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Playfair Display", serif;
+    font-family: var(--fonte-titulo);
 }
 
 p {
     margin-bottom: 30px;
 }
 
-.btn {
+.button {
     margin-right: 4px;
     margin-bottom: 4px;
-    font-family: "Playfair Display", serif;
-    font-size: 12px;
+    font-family: var(--fonte-extra);
+    font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 700;
+    border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
 }
 
-.btn.btn-md {
+.button.medium {
     padding: 10px 20px !important;
 }
 
-.btn.btn-lg {
+.button.large {
     padding: 18px 36px !important;
 }
 
-.btn:hover,
-.btn:active,
-.btn:focus {
+.button:hover,
+.button:active,
+.button:focus {
     box-shadow: none !important;
     outline: none !important;
 }
 
-.btn-primary {
+.button-primary {
     background: #fb6e14;
     color: #fff;
     border: 2px solid #fb6e14;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
+
+.button-primary {
+    background: #fb6e14;
+    color: #fff;
+    border: 2px solid #fb6e14;
+}
+
+.button-primary:hover,
+.button-primary:focus,
+.button-primary:active {
     background: #f16104 !important;
     border-color: #f16104 !important;
 }
 
-.btn-primary.btn-outline {
+.button-primary.button-outline {
     background: transparent;
     color: #fb6e14;
     border: 2px solid #fb6e14;
 }
 
-.btn-primary.btn-outline:hover,
-.btn-primary.btn-outline:focus,
-.btn-primary.btn-outline:active {
+.button-primary.button-outline:hover,
+.button-primary.button-outline:focus,
+.button-primary.button-outline:active {
     background: #fb6e14;
     color: #fff;
 }
 
-.btn-success {
+.button-success {
     background: #58ca7e;
     color: #fff;
     border: 2px solid #58ca7e;
 }
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active {
+.button-success:hover,
+.button-success:focus,
+.button-success:active {
     background: #45c46f !important;
     border-color: #45c46f !important;
 }
 
-.btn-success.btn-outline {
+.button-success.button-outline {
     background: transparent;
     color: #58ca7e;
     border: 2px solid #58ca7e;
